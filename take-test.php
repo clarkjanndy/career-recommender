@@ -431,7 +431,6 @@
   window.scrollTo(0, 0);
 }
 </script>
-<script src="test-assets/questions.js"></script>
 <script src="test-assets/script.js"></script>
 
 
