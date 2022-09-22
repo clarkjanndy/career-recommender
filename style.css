@@ -1,0 +1,362 @@
+
+body {
+    font-family: Tahoma;
+    background: #fafafa;
+}
+
+p {
+    font-family: Tahoma;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+}
+
+a,
+a:hover,
+a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.navbar {
+    padding: 15px 10px;
+    background: #fff;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-btn {
+    box-shadow: none;
+    outline: none !important;
+    border: none;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px solid black;
+    margin: 20px 0;
+}
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+    ----------------------------------------------------- */
+
+    #sidebar {
+        width: 350px;
+        position: fixed;
+        top: 0;
+        left: -350px;
+        height: 100vh;
+        z-index: 999;
+        background: #4267B2;/*facebook blue*/
+        color: #fff;
+        transition: all 0.3s;
+        overflow-y: scroll;
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+    }
+
+    #sidebar.active {
+        left: 0;
+    }
+
+    #dismiss {
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        -webkit-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+    }
+
+    #dismiss:hover {
+        background: #fff;
+        color: #4267B2;
+    }
+
+    .overlay {
+        display: none;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 998;
+        opacity: 0;
+        transition: all 0.5s ease-in-out;
+    }
+    .overlay.active {
+        display: block;
+        opacity: 1;
+    }
+
+    #sidebar .sidebar-header {
+        padding: 20px;
+        background: rgba(0, 0, 0, 0.4);
+
+    }
+
+    #sidebar ul.components {
+        padding: 20px 0;
+        border-bottom: 1px solid white;
+    }
+
+    #sidebar ul p {
+        color: #fff;
+        padding: 10px;
+    }
+
+    #sidebar ul li a {
+        padding: 10px;
+        font-size: 1.1em;
+        display: block;
+    }
+
+    #sidebar ul li a:hover {
+       color: #4267B2;
+       background: #fff;
+   }
+
+   #sidebar ul li.active>a,
+   a[aria-expanded="true"] {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #6d7fcc;
+}
+
+ul.CTAs {
+    padding: 20px;
+}
+
+ul.CTAs a {
+    text-align: center;
+    font-size: 0.9em !important;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+    ----------------------------------------------------- */
+
+    #content {
+        width: 100%;
+        padding: 20px;
+        min-height: 100vh;
+        transition: all 0.3s;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+
+/* ---------------------------------------------------
+   MY CUSTOM CSS 
+   ----------------------------------------------------- */
+
+a.footer-text{
+    color: white;
+}
+
+
+
+.bi-1x{font-size: 1rem;}
+.bi-2x{font-size: 1.5rem;}
+.bi-3x{font-size: 2rem;}
+.bi-4x{font-size: 2.5rem;}
+.bi-5x{font-size: 3rem;}
+
+.pull-right{
+    float: right;
+}
+
+.pull-left{
+    float: left;
+}
+
+.a-link:hover{
+    text-decoration: underline;
+    color: skyblue;
+    cursor: pointer;
+}
+
+.gallery-image{
+    width: 100%;
+    height: 200px;
+    object-fit: cover; 
+    object-position: center center; 
+}
+
+
+
+
+/* ---------------------------------------------------
+   SPLASHSCREEN CSS
+   ----------------------------------------------------- */
+   .splash-text{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* ---------------------------------------------------
+   TEST PAGE CSS
+   ----------------------------------------------------- */
+   .header{
+    border-bottom: 1px solid #9999;
+    padding: 10px;
+}
+
+.box-content{
+    padding: 10px;
+}
+
+.footer{
+    border-top: 1px solid #9999;
+    padding: 10px;
+}
+
+.instruction-box{   
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.test-box{
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;   
+}
+
+.instruction-box.show,
+.test-box.show{   
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.instruction-box.getaway,
+.test-box.getaway{   
+    display: none;
+}
+
+.test-box .header{
+   font-size: 20px;
+   font-weight: 600; 
+}
+
+.question{
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.options{
+    padding-left: 30px;
+}
+
+.options .option{
+    display: flex;
+    transition: all 0.3s ease;
+    font-size: 17px;
+    font-weight: 700;
+    border: 1px solid;
+    border-radius: 5px;
+    background-color: #4267B2;
+    color: white;
+    padding: 10px;
+    margin-bottom: 3px;
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+.options .option.selected{
+    background-color: green;
+}
+
+.option.disabled{
+    pointer-events: none;
+}
+
+.question-indicator small{
+   font-weight: bold;
+}
+
+.next-btn,
+.view-result-btn,
+.restart-btn{
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;   
+}
+
+.next-btn.show,
+.view-result-btn.show,
+.restart-btn.show{  
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.next-btn.getaway,
+.view-result-btn.getaway,
+.restart-btn.getaway{
+   display: none; 
+}
+
+
+.result-item{
+    border-radius: 5px;
+    background-image: linear-gradient(to right, white , #4267B2);
+    color: white;
+    padding: 10px;
+    margin-bottom: 3px;
+    display: flex;
+    color: black;
+}
+
+.profile-name:hover{
+    color: black;
+}
+
+.text-truncate.text-truncate--5{
+  display: -webkit-box !important;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+}
+
+.reply-form{
+    display: none;
+    pointer-events: none;
+}
+
+.reply-form.show{
+    display: block;
+    pointer-events: auto;
+}
